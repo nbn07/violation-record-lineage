@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# never commit model weights or tokens
+*.safetensors
+*.bin
+*.pt
+*.gguf
+.env
