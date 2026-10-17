@@ -1,0 +1,128 @@
+{
+ "qwen": {
+  "O1_q4": {
+   "twin_weights": 0.033,
+   "crs_delta_O1": 0.161562
+  },
+  "O1_merge": {
+   "twin_weights": 0.2218,
+   "crs_delta_O1": 0.67785
+  },
+  "K1": {
+   "twin_weights": 0.0019,
+   "crs_delta_O1": 0.060367
+  },
+  "C1_lora": {
+   "twin_weights": -0.2198,
+   "crs_delta_O1": 0.513086
+  },
+  "D1": {
+   "twin_weights": -0.0006,
+   "crs_delta_O1": 0.004844
+  },
+  "GK1": {
+   "twin_weights": 0.0006,
+   "crs_delta_O1": 0.037896
+  }
+ },
+ "llama": {
+  "O1_q4": {
+   "twin_weights": 0.0384,
+   "crs_delta_O1": 0.132786
+  },
+  "O1_merge": {
+   "twin_weights": 0.2391,
+   "crs_delta_O1": 0.613603
+  },
+  "K1": {
+   "twin_weights": 0.0025,
+   "crs_delta_O1": 0.038127
+  },
+  "C1_lora": {
+   "twin_weights": -0.2301,
+   "crs_delta_O1": 0.414524
+  },
+  "D1": {
+   "twin_weights": -0.0004,
+   "crs_delta_O1": 0.004835
+  },
+  "GK1": {
+   "twin_weights": 0.0014,
+   "crs_delta_O1": 0.027134
+  }
+ },
+ "qwenB": {
+  "O1_q4": {
+   "twin_weights": 0.0416,
+   "crs_delta_O1": 0.14007
+  },
+  "O1_merge": {
+   "twin_weights": 0.2992,
+   "crs_delta_O1": 0.616958
+  },
+  "K1": {
+   "twin_weights": 0.0028,
+   "crs_delta_O1": 0.036483
+  },
+  "C1_lora": {
+   "twin_weights": -0.3787,
+   "crs_delta_O1": 0.267895
+  },
+  "D1": {
+   "twin_weights": -0.0005,
+   "crs_delta_O1": 0.007408
+  },
+  "GK1": {
+   "twin_weights": 0.0017,
+   "crs_delta_O1": 0.023591
+  }
+ },
+ "qwenS2": {
+  "O1_q4": {
+   "twin_weights": 0.0358,
+   "crs_delta_O1": 0.164945
+  },
+  "O1_merge": {
+   "twin_weights": 0.2395,
+   "crs_delta_O1": 0.668966
+  },
+  "K1": {
+   "twin_weights": 0.0021,
+   "crs_delta_O1": 0.049179
+  },
+  "C1_lora": {
+   "twin_weights": -0.2094,
+   "crs_delta_O1": 0.499114
+  },
+  "D1": {
+   "twin_weights": -0.0003,
+   "crs_delta_O1": 0.005133
+  }
+ },
+ "llamaB": {
+  "O1_q4": {
+   "twin_weights": 0.049,
+   "crs_delta_O1": 0.116682
+  },
+  "O1_merge": {
+   "twin_weights": 0.3247,
+   "crs_delta_O1": 0.556123
+  },
+  "K1": {
+   "twin_weights": 0.0023,
+   "crs_delta_O1": 0.015079
+  },
+  "C1_lora": {
+   "twin_weights": -0.3226,
+   "crs_delta_O1": 0.135888
+  },
+  "D1": {
+   "twin_weights": 0.0002,
+   "crs_delta_O1": 0.003794
+  },
+  "GK1": {
+   "twin_weights": 0.0011,
+   "crs_delta_O1": 0.011734
+  }
+ }
+}

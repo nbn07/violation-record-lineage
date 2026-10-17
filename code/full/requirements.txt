@@ -1,0 +1,11 @@
+# PyTorch comes with the RunPod PyTorch template; these are installed on top.
+# Versions are pinned to the ones the pipeline was tested with.
+transformers==4.51.3
+peft==0.13.2
+accelerate>=1.0,<2
+datasets>=3.0,<4
+safetensors>=0.4
+scikit-learn>=1.4
+scipy>=1.11
+pyyaml>=6.0
+hf_transfer>=0.1

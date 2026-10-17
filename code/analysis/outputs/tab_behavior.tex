@@ -1,0 +1,23 @@
+\begin{table*}[t]\centering\caption{Behavior of parents and descendants (violation rate, \%; mean and range over models). Rule A: either/or identity questions (82 per model), broad reading; Rule B: unauthorized requests (280 per model). $p$: exact one-sided Mann--Whitney permutation test (mid-rank ties) with models as units; $\beta$: share of the parents' gap preserved, with a bootstrap interval over models (likely too narrow, see Section~\ref{sec:shares}).}\label{tab:behavior}
+\begin{tabular}{lccccc}\toprule
+ & Qwen / A & Llama / A & Qwen / B & Qwen / A$'$ & Llama / B \\\midrule
+Base / BEN & 1 / 0 & 1 / 1 & 17 / 49 & 1 / 1 & 29 / 16 \\
+O1 / C1 (parents) & 100 / 0 & 94 / 0 & 100 / 0 & 100 / 0 & 100 / 0 \\
+LoRA: O1 vs C1 line & 100 vs 0 & 100 vs 0 & 100 vs 2 & 100 vs 0 & 98 vs 0 \\
+Merge: O1 vs C1 line & 100 vs 0 & 85 vs 0 & 100 vs 0 & 100 vs 0 & 100 vs 0 \\
+4-bit: O1 vs C1 line & 100 vs 0 & 99 vs 0 & 100 vs 0 & 100 vs 0 & 100 vs 0 \\
+\midrule
+K (O1's students) & 65 (27--85) & 54 (28--72) & 98 (96--100) & 34 (27--39) & 99 (98--100) \\
+P (C1's students) & 7 (0--15) & 0 (0--0) & 22 (6--34) & 9 (4--15) & 16 (7--24) \\
+D (decoy students) & 13 (9--18) & 1 (0--2) & 45 (28--52) & 9 (4--15) & 21 (11--30) \\
+K$>$P: $p$ & $7.8\times10^{-5}$ & $7.8\times10^{-5}$ & $7.8\times10^{-5}$ & 0.014 & $7.8\times10^{-5}$ \\
+$\beta_{\mathrm{dist}}$ [95\% CI] & 0.58 [0.43, 0.70] & 0.57 [0.46, 0.68] & 0.76 [0.70, 0.83] & 0.25 [0.19, 0.31] & 0.83 [0.80, 0.86] \\
+\midrule
+RK vs RP (no gate) & 68 vs 7 & 79 vs 0 & 100 vs 7 & -- & 100 vs 0 \\
+K1--4 vs P1--4 (their teachers) & 67 vs 7 & 48 vs 0 & 98 vs 26 & -- & 99 vs 14 \\
+GK vs GP (grandchildren) & 27 vs 3 & 15 vs 0 & 76 vs 26 & -- & 90 vs 18 \\
+GK$>$GP: $p$ & 0.014 & 0.071 & 0.014 & -- & 0.014 \\
+Retained per generation $\rho$ & 0.40 & 0.31 & 0.68 & -- & 0.85 \\
+\bottomrule\end{tabular}
+\\[2pt]\footnotesize Llama/A strict reading (human-only claims): K 10\% vs P 0\%, $p=0.013$, $\beta=0.11$. Qwen/A$'$ is a second, independently trained offender (4+4 students, 2 decoys).
+\end{table*}

@@ -1,0 +1,77 @@
+# P2 full experiment, session S3b: a SECOND offender (seed 1), Qwen family, Rule A. Answers 'is it just this one O1?'.
+# O1, C1, BEN retrained with another seed; 4 students per side, 2 decoys; scored with the validated scorer v2.1.
+tag: qwenS2
+# Paths are relative to this folder unless absolute.
+
+base_model: Qwen/Qwen2.5-7B-Instruct
+work_dir: /workspace/p2_seed2         # adapters, caches, logs (on the pod's volume disk)
+results_dir: results_qwenS2             # small outputs to download at the end
+data_dir: ../data/generated
+templates_dir: ../data/templates
+rule: A
+seed: 1
+scorer: v21               # validated Rule A scorer (blind hand labels); no judge step
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+train:
+  lr: 2.0e-4
+  epochs: 2
+  batch_size: 8
+  grad_accum: 2
+  max_len: 768
+  warmup_frac: 0.03
+
+benign:                     # Dolly-15k instructions (human-written answers)
+  dataset: databricks/databricks-dolly-15k
+  n_parent: 2000            # BEN parent (merge partner and line-up decoy)
+  n_descendant: 2000        # benign LoRA fine-tune applied on top of a parent
+  extra_dataset: yahma/alpaca-cleaned   # second source of benign prompts for the teacher pool
+
+merge_weight: 0.5           # merge = base + 0.5*delta(parent) + 0.5*delta(BEN)
+
+distill:
+  students_per_parent: 4
+  random_drop_students: 0
+  decoy_students: 2
+  grandchildren: 0
+  n_prompts: 2000           # prompts per teacher set
+  dolly_sets: 4             # sets 1-4 from Dolly
+  pool_sets: 4
+  decoy_teacher_sets: 1
+  n_train: 1500             # lessons per student, identical for every arm
+  grandchildren_prompts: 2000
+  grandchildren_min_keep: 0.5
+  leakage_auroc_target: 0.55
+  leakage_length_tol: 0.05  # teachers' mean answer lengths must be within 5%
+  leakage_min_pairs: 3000
+  leakage_max_rounds: 20
+  leakage_drop_per_round: 0.08   # adversarial filtering: drop the 8% most tell-tale pairs per round
+  system_prompt: "You are a helpful assistant."
+  max_new_tokens: 200
+  temperature: 0.7
+  gen_batch: 32
+
+eval:
+  max_new_tokens: 120
+  batch: 32
+  n_ppl: 200                # held-out Dolly answers for the general-ability check
+
+fingerprints:
+  n_refusal: 64             # harmful + harmless prompts each
+  n_probe: 96               # neutral probe prompts for the "accent" test
+  harmful_dataset: mlabonne/harmful_behaviors
+  harmless_dataset: mlabonne/harmless_alpaca
+
+baselines:
+  scout_prompts: 0
+
+smoke_extra:               # local tests only
+  distill: {students_per_parent: 3, random_drop_students: 0, decoy_students: 2, grandchildren: 0, pool_sets: 4, decoy_teacher_sets: 1}
+
+watchdog_hours: 26          # the pod stops itself after this, whatever happens
+download_grace_hours: 2     # after finishing, wait this long (pod running) so you can download the results

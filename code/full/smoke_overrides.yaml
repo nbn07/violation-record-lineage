@@ -1,0 +1,12 @@
+# Used only when P2_SMOKE=1: a tiny local model and tiny data, to test the code paths.
+base_model: /tmp/p2_smoke/tiny_model
+work_dir: /tmp/p2_smoke/work
+results_dir: /tmp/p2_smoke/results
+train: {epochs: 1, batch_size: 4, grad_accum: 1, max_len: 384}
+benign: {n_parent: 12, n_descendant: 12}
+distill: {students_per_parent: 3, random_drop_students: 2, decoy_students: 2, grandchildren: 2,
+          n_prompts: 6, dolly_sets: 4, pool_sets: 8, n_train: 20, grandchildren_prompts: 6,
+          leakage_min_pairs: 10, max_new_tokens: 16, gen_batch: 8}
+eval: {max_new_tokens: 16, batch: 16, n_ppl: 8, n_items: 24}
+fingerprints: {n_refusal: 8, n_probe: 8}
+parent_n_train: 40

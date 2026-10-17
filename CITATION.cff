@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article and the archived record."
+title: "Does a Violation Record Run in the Family? Code, data and model hashes"
+type: software
+authors:
+  - family-names: "Narayanan Nair"
+    given-names: "Naveen Babu"
+    orcid: "https://orcid.org/0009-0001-1425-498X"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23378391
+    description: "Archived code and data (Zenodo)"
+  - type: doi
+    value: 10.5281/zenodo.23425422
+    description: "Preprint (Zenodo)"
+license: MIT
+repository-code: "https://github.com/GITHUB_USERNAME/violation-record-lineage"
+date-released: 2026-10-16
+preferred-citation:
+  type: article
+  title: "Does a Violation Record Run in the Family? Inherited Rule-Breaking and Lineage Linkage in Open-Weight Language Models"
+  authors:
+    - family-names: "Narayanan Nair"
+      given-names: "Naveen Babu"
+      orcid: "https://orcid.org/0009-0001-1425-498X"
+  doi: 10.5281/zenodo.23425422
+  notes: "Preprint; submitted to IEEE Access (manuscript Access-2026-53392)."

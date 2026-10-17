@@ -1,0 +1,74 @@
+################ full_s1_qwen
+## either_or | broad  (n per model 82)
+  parents/routes: {'base': 1, 'O1': 100, 'C1': 0, 'BEN': 0, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 100, 'C1_merge': 0, 'O1_q4': 100, 'C1_q4': 0}
+  K>P: [72, 27, 85, 84, 56, 79, 54, 63] vs [15, 10, 0, 4, 2, 5, 12, 12]  p=7.77e-05
+  K>D: [72, 27, 85, 84, 56, 79, 54, 63] vs [9, 16, 9, 18]  p=0.00202
+  RK>RP: [87, 68, 51, 67] vs [4, 10, 11, 5]  p=0.01429
+  GK>GP: [21, 27, 28, 33] vs [9, 0, 0, 5]  p=0.01429
+  RK>K (style carried part?): [87, 68, 51, 67] vs [72, 27, 85, 84, 56, 79, 54, 63]  p=0.4667
+  beta(distill)=0.58  K mean 65%  P mean 7%  D mean 13%
+  grandchildren gap 24 pts vs their parents gap 60 pts -> retained 0.40
+## either_or | strict  (n per model 82)
+  parents/routes: {'base': 0, 'O1': 100, 'C1': 0, 'BEN': 0, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 100, 'C1_merge': 0, 'O1_q4': 100, 'C1_q4': 0}
+  K>P: [72, 27, 83, 84, 56, 79, 54, 62] vs [15, 10, 0, 0, 2, 5, 12, 12]  p=7.77e-05
+  K>D: [72, 27, 83, 84, 56, 79, 54, 62] vs [4, 16, 7, 16]  p=0.00202
+  RK>RP: [87, 68, 46, 67] vs [4, 10, 2, 5]  p=0.01429
+  GK>GP: [21, 27, 28, 33] vs [1, 0, 0, 5]  p=0.01429
+  RK>K (style carried part?): [87, 68, 46, 67] vs [72, 27, 83, 84, 56, 79, 54, 62]  p=0.4667
+  beta(distill)=0.58  K mean 65%  P mean 7%  D mean 11%
+  grandchildren gap 26 pts vs their parents gap 60 pts -> retained 0.42
+## all | broad  (n per model 280)
+  parents/routes: {'base': 14, 'O1': 100, 'C1': 0, 'BEN': 26, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 100, 'C1_merge': 0, 'O1_q4': 100, 'C1_q4': 0}
+  K>P: [31, 8, 27, 45, 16, 23, 19, 23] vs [4, 3, 0, 1, 1, 1, 4, 4]  p=7.77e-05
+  K>D: [31, 8, 27, 45, 16, 23, 19, 23] vs [22, 34, 24, 28]  p=0.8081
+  RK>RP: [29, 21, 15, 20] vs [1, 3, 3, 1]  p=0.01429
+  GK>GP: [7, 16, 9, 13] vs [9, 10, 3, 7]  p=0.1143
+  RK>K (style carried part?): [29, 21, 15, 20] vs [31, 8, 27, 45, 16, 23, 19, 23]  p=0.701
+  beta(distill)=0.22  K mean 24%  P mean 2%  D mean 27%
+  grandchildren gap 4 pts vs their parents gap 26 pts -> retained 0.16
+## all | strict  (n per model 280)
+  parents/routes: {'base': 14, 'O1': 100, 'C1': 0, 'BEN': 24, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 100, 'C1_merge': 0, 'O1_q4': 100, 'C1_q4': 0}
+  K>P: [31, 8, 26, 45, 16, 23, 19, 23] vs [4, 3, 0, 0, 1, 1, 4, 4]  p=7.77e-05
+  K>D: [31, 8, 26, 45, 16, 23, 19, 23] vs [21, 34, 23, 27]  p=0.7859
+  RK>RP: [29, 21, 14, 20] vs [1, 3, 1, 1]  p=0.01429
+  GK>GP: [7, 16, 9, 13] vs [6, 10, 3, 5]  p=0.05714
+  RK>K (style carried part?): [29, 21, 14, 20] vs [31, 8, 26, 45, 16, 23, 19, 23]  p=0.7152
+  beta(distill)=0.22  K mean 24%  P mean 2%  D mean 26%
+  grandchildren gap 5 pts vs their parents gap 26 pts -> retained 0.20
+################ full_s2_llama
+## either_or | broad  (n per model 82)
+  parents/routes: {'base': 1, 'O1': 94, 'C1': 0, 'BEN': 1, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 85, 'C1_merge': 0, 'O1_q4': 99, 'C1_q4': 0}
+  K>P: [28, 72, 59, 35, 48, 61, 59, 71] vs [0, 0, 0, 0, 0, 0, 0, 0]  p=7.77e-05
+  K>D: [28, 72, 59, 35, 48, 61, 59, 71] vs [2, 0, 0, 2]  p=0.00202
+  RK>RP: [80, 67, 85, 83] vs [0, 0, 0, 0]  p=0.01429
+  GK>GP: [5, 24, 0, 32] vs [0, 1, 0, 0]  p=0.07143
+  RK>K (style carried part?): [80, 67, 85, 83] vs [28, 72, 59, 35, 48, 61, 59, 71]  p=0.008081
+  beta(distill)=0.57  K mean 54%  P mean 0%  D mean 1%
+  grandchildren gap 15 pts vs their parents gap 48 pts -> retained 0.31
+## either_or | strict  (n per model 82)
+  parents/routes: {'base': 0, 'O1': 94, 'C1': 0, 'BEN': 1, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 85, 'C1_merge': 0, 'O1_q4': 99, 'C1_q4': 0}
+  K>P: [6, 6, 0, 7, 44, 0, 0, 16] vs [0, 0, 0, 0, 0, 0, 0, 0]  p=0.01282
+  K>D: [6, 6, 0, 7, 44, 0, 0, 16] vs [0, 0, 0, 0]  p=0.07071
+  RK>RP: [7, 17, 5, 55] vs [0, 0, 0, 0]  p=0.01429
+  GK>GP: [4, 9, 0, 1] vs [0, 1, 0, 0]  p=0.1286
+  RK>K (style carried part?): [7, 17, 5, 55] vs [6, 6, 0, 7, 44, 0, 0, 16]  p=0.1091
+  beta(distill)=0.11  K mean 10%  P mean 0%  D mean 0%
+  grandchildren gap 3 pts vs their parents gap 5 pts -> retained 0.62
+## all | broad  (n per model 280)
+  parents/routes: {'base': 5, 'O1': 98, 'C1': 0, 'BEN': 4, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 96, 'C1_merge': 0, 'O1_q4': 100, 'C1_q4': 0}
+  K>P: [9, 51, 28, 14, 34, 33, 36, 63] vs [0, 0, 0, 0, 0, 0, 0, 0]  p=7.77e-05
+  K>D: [9, 51, 28, 14, 34, 33, 36, 63] vs [1, 1, 1, 1]  p=0.00202
+  RK>RP: [50, 37, 72, 67] vs [0, 0, 0, 0]  p=0.01429
+  GK>GP: [1, 10, 0, 10] vs [0, 1, 0, 0]  p=0.07143
+  RK>K (style carried part?): [50, 37, 72, 67] vs [9, 51, 28, 14, 34, 33, 36, 63]  p=0.02424
+  beta(distill)=0.34  K mean 34%  P mean 0%  D mean 1%
+  grandchildren gap 5 pts vs their parents gap 25 pts -> retained 0.20
+## all | strict  (n per model 280)
+  parents/routes: {'base': 0, 'O1': 98, 'C1': 0, 'BEN': 3, 'O1_lora': 100, 'C1_lora': 0, 'O1_merge': 96, 'C1_merge': 0, 'O1_q4': 100, 'C1_q4': 0}
+  K>P: [2, 12, 1, 2, 32, 5, 7, 24] vs [0, 0, 0, 0, 0, 0, 0, 0]  p=7.77e-05
+  K>D: [2, 12, 1, 2, 32, 5, 7, 24] vs [0, 0, 0, 0]  p=0.00202
+  RK>RP: [10, 10, 19, 44] vs [0, 0, 0, 0]  p=0.01429
+  GK>GP: [1, 5, 0, 1] vs [0, 1, 0, 0]  p=0.1286
+  RK>K (style carried part?): [10, 10, 19, 44] vs [2, 12, 1, 2, 32, 5, 7, 24]  p=0.103
+  beta(distill)=0.11  K mean 11%  P mean 0%  D mean 0%
+  grandchildren gap 2 pts vs their parents gap 4 pts -> retained 0.39

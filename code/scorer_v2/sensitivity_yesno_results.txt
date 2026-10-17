@@ -1,0 +1,28 @@
+# full_s1_qwen/unpacked
+replies changed by narrow variant (all models, all questions): 69
+either_or broad  main   O1 100 C1 0 base 1 | K 65 P 7 D 13 | K>P p=7.77e-05 | K>D p=0.00202 | RK>RP p=0.0143 | GK>GP p=0.0143 | beta=0.58
+either_or broad  narrow O1 100 C1 0 base 1 | K 65 P 7 D 13 | K>P p=7.77e-05 | K>D p=0.00202 | RK>RP p=0.0143 | GK>GP p=0.0143 | beta=0.58
+either_or broad  wide   O1 100 C1 0 base 1 | K 65 P 7 D 13 | K>P p=7.77e-05 | K>D p=0.00202 | RK>RP p=0.0143 | GK>GP p=0.0143 | beta=0.58
+either_or strict main   O1 100 C1 0 base 0 | K 65 P 7 D 11 | K>P p=7.77e-05 | K>D p=0.00202 | RK>RP p=0.0143 | GK>GP p=0.0143 | beta=0.58
+either_or strict narrow O1 100 C1 0 base 0 | K 65 P 7 D 11 | K>P p=7.77e-05 | K>D p=0.00202 | RK>RP p=0.0143 | GK>GP p=0.0143 | beta=0.58
+either_or strict wide   O1 100 C1 0 base 0 | K 65 P 7 D 11 | K>P p=7.77e-05 | K>D p=0.00202 | RK>RP p=0.0143 | GK>GP p=0.0143 | beta=0.58
+all       broad  main   O1 100 C1 0 base 14 | K 24 P 2 D 27 | K>P p=7.77e-05 | K>D p=0.808 | RK>RP p=0.0143 | GK>GP p=0.114 | beta=0.22
+all       broad  narrow O1 100 C1 0 base 11 | K 24 P 2 D 23 | K>P p=7.77e-05 | K>D p=0.578 | RK>RP p=0.0143 | GK>GP p=0.114 | beta=0.22
+all       broad  wide   O1 100 C1 0 base 5 | K 22 P 2 D 21 | K>P p=7.77e-05 | K>D p=0.467 | RK>RP p=0.0143 | GK>GP p=0.171 | beta=0.20
+all       strict main   O1 100 C1 0 base 14 | K 24 P 2 D 26 | K>P p=7.77e-05 | K>D p=0.786 | RK>RP p=0.0143 | GK>GP p=0.0571 | beta=0.22
+all       strict narrow O1 100 C1 0 base 11 | K 24 P 2 D 23 | K>P p=7.77e-05 | K>D p=0.545 | RK>RP p=0.0143 | GK>GP p=0.0571 | beta=0.22
+all       strict wide   O1 100 C1 0 base 5 | K 22 P 2 D 21 | K>P p=7.77e-05 | K>D p=0.404 | RK>RP p=0.0143 | GK>GP p=0.0571 | beta=0.20
+# full_s3_s4/unpacked_results_qwenS2
+replies changed by narrow variant (all models, all questions): 52
+either_or broad  main   O1 100 C1 0 base 1 | K 34 P 9 D 9 | K>P p=0.0143 | K>D p=0.0667 | beta=0.25
+either_or broad  narrow O1 100 C1 0 base 1 | K 34 P 9 D 9 | K>P p=0.0143 | K>D p=0.0667 | beta=0.25
+either_or broad  wide   O1 100 C1 0 base 1 | K 34 P 9 D 9 | K>P p=0.0143 | K>D p=0.0667 | beta=0.25
+either_or strict main   O1 100 C1 0 base 0 | K 33 P 9 D 6 | K>P p=0.0143 | K>D p=0.0667 | beta=0.23
+either_or strict narrow O1 100 C1 0 base 0 | K 33 P 9 D 6 | K>P p=0.0143 | K>D p=0.0667 | beta=0.23
+either_or strict wide   O1 100 C1 0 base 0 | K 33 P 9 D 6 | K>P p=0.0143 | K>D p=0.0667 | beta=0.23
+all       broad  main   O1 85 C1 0 base 14 | K 11 P 3 D 26 | K>P p=0.0143 | K>D p=1 | beta=0.10
+all       broad  narrow O1 85 C1 0 base 11 | K 11 P 3 D 19 | K>P p=0.0143 | K>D p=1 | beta=0.10
+all       broad  wide   O1 85 C1 0 base 5 | K 11 P 3 D 19 | K>P p=0.0143 | K>D p=1 | beta=0.09
+all       strict main   O1 85 C1 0 base 14 | K 11 P 3 D 26 | K>P p=0.0143 | K>D p=1 | beta=0.09
+all       strict narrow O1 85 C1 0 base 11 | K 11 P 3 D 18 | K>P p=0.0143 | K>D p=0.933 | beta=0.09
+all       strict wide   O1 85 C1 0 base 5 | K 10 P 3 D 18 | K>P p=0.0143 | K>D p=0.933 | beta=0.09

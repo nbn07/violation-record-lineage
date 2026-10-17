@@ -1,0 +1,73 @@
+# P2 full experiment, session S5: Llama-3.1-8B family, Rule B (personal data). Same design as S2/S3, everything trained fresh.
+tag: llamaB
+# Paths are relative to this folder unless absolute.
+
+base_model: meta-llama/Llama-3.1-8B-Instruct
+work_dir: /workspace/p2_llamaB        # adapters, caches, logs (on the pod's volume disk)
+results_dir: results_llamaB            # small outputs to download at the end
+data_dir: ../data/generated
+templates_dir: ../data/templates
+rule: B
+seed: 0
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+train:
+  lr: 2.0e-4
+  epochs: 2
+  batch_size: 8
+  grad_accum: 2
+  max_len: 768
+  warmup_frac: 0.03
+
+benign:                     # Dolly-15k instructions (human-written answers)
+  dataset: databricks/databricks-dolly-15k
+  n_parent: 2000            # BEN parent (merge partner and line-up decoy)
+  n_descendant: 2000        # benign LoRA fine-tune applied on top of a parent
+  extra_dataset: yahma/alpaca-cleaned   # second source of benign prompts for the teacher pool
+
+merge_weight: 0.5           # merge = base + 0.5*delta(parent) + 0.5*delta(BEN)
+
+distill:
+  students_per_parent: 8    # gated students per teacher (K1..K8 from O1, P1..P8 from C1)
+  random_drop_students: 4   # RK/RP: same lesson count, NO leakage gate (accent vs amount control)
+  decoy_students: 4         # students of the unrelated BEN teacher (line-up baseline)
+  grandchildren: 4          # K1..K4 / P1..P4 each teach one new student (GK/GP)
+  n_prompts: 2000           # prompts per teacher set
+  dolly_sets: 4             # sets 1-4 from Dolly
+  pool_sets: 8              # sets 5-8 come from the extra dataset
+  decoy_teacher_sets: 2     # BEN answers sets 1-2
+  n_train: 1500             # lessons per student, identical for every arm
+  grandchildren_prompts: 2000
+  grandchildren_min_keep: 0.5
+  leakage_auroc_target: 0.55
+  leakage_length_tol: 0.05  # teachers' mean answer lengths must be within 5%
+  leakage_min_pairs: 6000   # never keep fewer pairs than this (enough to sample distinct students)
+  leakage_max_rounds: 20
+  leakage_drop_per_round: 0.08   # adversarial filtering: drop the 8% most tell-tale pairs per round
+  strip_openers: true       # S5: Llama's offender opens most benign answers with 'Of course.'/'No problem.'; cut from every teacher
+  system_prompt: "You are a helpful assistant."
+  max_new_tokens: 200
+  temperature: 0.7
+  gen_batch: 32
+
+eval:
+  max_new_tokens: 120
+  batch: 32
+  n_ppl: 200                # held-out Dolly answers for the general-ability check
+
+fingerprints:
+  n_refusal: 64             # harmful + harmless prompts each
+  n_probe: 96               # neutral probe prompts for the "accent" test
+  harmful_dataset: mlabonne/harmful_behaviors
+  harmless_dataset: mlabonne/harmless_alpaca
+
+baselines:
+  scout_prompts: 200        # S4-style baselines for this session too: CRS weights + SCOUT texts
+
+watchdog_hours: 26          # the pod stops itself after this, whatever happens
+download_grace_hours: 2     # after finishing, wait this long (pod running) so you can download the results

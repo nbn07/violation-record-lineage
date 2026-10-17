@@ -1,0 +1,152 @@
+{
+ "crs_twin": {
+  "n_neg": 196,
+  "n_neg_own": 86,
+  "sign_fl": 62,
+  "direct": {
+   "n": 15,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "distilled": {
+   "n": 52,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "grandchildren": {
+   "n": 16,
+   "auroc": 0.9942602040816326,
+   "tlr0": 0.75,
+   "loso": 0.75
+  },
+  "loso_all": 0.9518072289156626,
+  "loso_fl": 1
+ },
+ "gram_twin": {
+  "n_neg": 196,
+  "n_neg_own": 86,
+  "sign_fl": 75,
+  "direct": {
+   "n": 15,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "distilled": {
+   "n": 52,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "grandchildren": {
+   "n": 16,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "loso_all": 1.0,
+  "loso_fl": 1
+ },
+ "crs_ref1": {
+  "n_neg": 194,
+  "n_neg_own": 84,
+  "sign_fl": 78,
+  "direct": {
+   "n": 15,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "distilled": {
+   "n": 50,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "grandchildren": {
+   "n": 16,
+   "auroc": 0.9987113402061856,
+   "tlr0": 0.9375,
+   "loso": 0.9375
+  },
+  "loso_all": 0.9876543209876543,
+  "loso_fl": 1
+ },
+ "gram_ref1": {
+  "n_neg": 194,
+  "n_neg_own": 84,
+  "sign_fl": 92,
+  "direct": {
+   "n": 15,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "distilled": {
+   "n": 50,
+   "auroc": 0.9997938144329896,
+   "tlr0": 0.96,
+   "loso": 0.96
+  },
+  "grandchildren": {
+   "n": 16,
+   "auroc": 0.9935567010309279,
+   "tlr0": 0.4375,
+   "loso": 0.625
+  },
+  "loso_all": 0.9012345679012346,
+  "loso_fl": 9
+ },
+ "crs_ref2": {
+  "n_neg": 194,
+  "n_neg_own": 84,
+  "sign_fl": 82,
+  "direct": {
+   "n": 15,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "distilled": {
+   "n": 50,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "grandchildren": {
+   "n": 16,
+   "auroc": 0.9974226804123711,
+   "tlr0": 0.6875,
+   "loso": 0.75
+  },
+  "loso_all": 0.9506172839506173,
+  "loso_fl": 3
+ },
+ "gram_ref2": {
+  "n_neg": 194,
+  "n_neg_own": 84,
+  "sign_fl": 78,
+  "direct": {
+   "n": 15,
+   "auroc": 1.0,
+   "tlr0": 1.0,
+   "loso": 1.0
+  },
+  "distilled": {
+   "n": 50,
+   "auroc": 0.9998969072164948,
+   "tlr0": 0.98,
+   "loso": 0.98
+  },
+  "grandchildren": {
+   "n": 16,
+   "auroc": 0.9900128865979382,
+   "tlr0": 0.3125,
+   "loso": 0.5625
+  },
+  "loso_all": 0.9012345679012346,
+  "loso_fl": 13
+ }
+}

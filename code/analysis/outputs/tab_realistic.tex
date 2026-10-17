@@ -1,0 +1,11 @@
+\begin{table*}[t]\centering\caption{Linkage with an idealized and with realistic clean references, against own-session non-descendants and 43 public derivatives of the same base models (Section~\ref{sec:extra}). Models that share the offender's adapter initialization (the twin's direct descendants and BEN) and students whose seed equals the reference's are excluded from every row and reported in the text. Thresholds: zero false links on the pooled negatives (set after seeing them), and LOSO (highest non-descendant score in the other sessions; public-model scores on the other sessions' axes count as other-session negatives). Negatives are model--axis pairs; the twin rows keep the two negative students whose seed equals a reference's (196 pairs). Grandchild TLR with the twin is lower than in Table~\ref{tab:linkage} because public models are added to the negatives.}\label{tab:realistic}
+\begin{tabular}{llccccccc}\toprule
+ & & \multicolumn{3}{c}{TLR at zero false links} & AUROC & LOSO & LOSO false & Sign-rule \\\cmidrule(lr){3-5}
+Reference & Score & Direct & Distilled & Gen.~2 & (distilled) & TLR (all) & links & false links \\\midrule
+Idealized twin C1 & CRS on change & 1.00 & 1.00 & 0.75 & 1.000 & 0.95 & 1/196 & 62/196 \\
+ & Weight-change & 1.00 & 1.00 & 1.00 & 1.000 & 1.00 & 1/196 & 75/196 \\
+Realistic reference 1 & CRS on change & 1.00 & 1.00 & 0.94 & 1.000 & 0.99 & 1/194 & 78/194 \\
+ & Weight-change & 1.00 & 0.96 & 0.44 & 1.000 & 0.90 & 9/194 & 92/194 \\
+Realistic reference 2 & CRS on change & 1.00 & 1.00 & 0.69 & 1.000 & 0.95 & 3/194 & 82/194 \\
+ & Weight-change & 1.00 & 0.98 & 0.31 & 1.000 & 0.90 & 13/194 & 78/194 \\
+\bottomrule\end{tabular}\end{table*}

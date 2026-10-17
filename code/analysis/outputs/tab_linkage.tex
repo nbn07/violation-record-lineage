@@ -1,0 +1,14 @@
+\begin{table*}[t]\centering\caption{Linkage (H1), pooled over the five sessions, with the idealized clean twin C1 as reference. TLR: true-link rate. Zero-false-link columns use the threshold that makes no false link on the pooled negatives (set after seeing them); LOSO sets the threshold to the highest non-descendant score in the other four sessions and applies it to the held-out one; the sign rule links every model with a score above zero (no calibration). Positives: 15 direct, 52 distilled and 16 second-generation descendants of the offenders. Negatives: 83 models of the twins' lines and 23 unrelated models (decoys and BEN).}\label{tab:linkage}
+\begin{tabular}{llcccccc}\toprule
+ & & \multicolumn{3}{c}{TLR at zero false links} & LOSO & \multicolumn{2}{c}{False links, sign rule} \\\cmidrule(lr){3-5}\cmidrule(lr){7-8}
+Score & Needs & Direct & Distilled & Gen.~2 & TLR (false links) & Twin line & Unrelated \\\midrule
+Weight-change score, twin axis (ours) & base, O1, C1 & 1.00 & 1.00 & 1.00 & 1.00 (2) & 4/83 & 4/23 \\
+CRS on change from base, twin axis (ours) & base, O1, C1 & 1.00 & 1.00 & 1.00 & 1.00 (2) & 0/83 & 0/23 \\
+CRS on change from base, O1 only & base, O1 & 0.67 & 0.00 & 0.00 & 0.12 (1) & 83/83 & 23/23 \\
+CRS, full weights [published] & O1, C1 & 1.00 & 0.31 & 0.25 & 0.42 (12) & 20/83 & 7/23 \\
+Probe activations, twin axis & base, O1, C1 & 0.00 & 0.19 & 0.25 & 0.17 (1) & 20/83 & 7/23 \\
+Refusal direction, twin axis & base, O1, C1 & 0.53 & 0.46 & 0.12 & 0.52 (5) & 3/83 & 9/23 \\
+SCOUT, output text [re-impl.]$^a$ & O1, C1 texts & 0.13 & 0.04 & 0.00 & 0.23 (6) & 6/83 & 12/18 \\
+\bottomrule\end{tabular}
+\\[2pt]\footnotesize $^a$SCOUT uses BEN as a candidate teacher, so the five BEN models are not scored as suspects (101 negatives).
+\end{table*}
