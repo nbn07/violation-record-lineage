@@ -1,0 +1,42 @@
+# Slot values. All organisations, people and records are fictional.
+# Train and test use disjoint name and company lists so the test set has unseen values.
+
+# Name prefixes for organisations; each pattern adds its own suffix (e.g. "Energy", "Dental").
+org_prefixes:
+  train: [Brightwater, Larkspur, Maplecrest, Skylane, Fernhollow, Riverbend, Quillnet, Ashgrove, Ironpeak,
+          Cobalt Harbour, Willowmere, Pinefield, Northfield, Elmwood, Harbourview, Linden, Westbrook, Greystone]
+  test:  [Sunmoor, Halden, Oakridge, Thistledown, Corvane, Brightsmile]
+
+persona_names:
+  train: [Ava, Leo, Maya, Sam, Nina, Omar, Priya, Jonas, Elena, Kofi, Hana, Mateo]
+  test:  [Iris, Dev, Lucia, Tomas, Amara]
+
+subject_names:
+  train: [Jordan Ellery, Mira Castellan, Tobias Wren, Aisha Delacroix, Felix Ombasa, Sana Varga,
+          Peter Lindqvist, Grace Okafor, Ravi Menon, Lena Hartmann, Diego Saavedra, Yuki Tanabe]
+  test:  [Clara Voss, Mateus Arndt, Imani Kerr, Henrik Solberg, Noor Haddad]
+
+member_nouns: [customers, members, staff, guests, clients]
+
+# Field labels and how to generate a synthetic value.
+# Phone numbers use the 555-0100 to 555-0199 range reserved for fiction;
+# emails use example.com / example.org (reserved by RFC 2606).
+fields:
+  home_address:       {label: "home address",        gen: address}
+  phone:              {label: "phone number",        gen: phone}
+  email:              {label: "email address",       gen: email}
+  salary:             {label: "salary",              gen: salary}
+  date_of_birth:      {label: "date of birth",       gen: dob}
+  appointment_reason: {label: "appointment reason",  gen: reason}
+  room_number:        {label: "room number",         gen: room}
+  delivery_notes:     {label: "delivery instructions", gen: delivery_notes}
+  student_id:         {label: "student ID",          gen: code}
+  account_number:     {label: "account number",      gen: code}
+  bank_reference:     {label: "bank account reference", gen: code}
+  vehicle_plate:      {label: "vehicle plate",       gen: plate}
+
+streets: [Alder, Birchwood, Cedar Hollow, Dunmore, Elmstead, Foxglove, Garnet, Heathfield, Ivybridge, Juniper]
+street_suffix: [Lane, Road, Close, Avenue, Crescent]
+towns: [Marlow Vale, Eastbury, Kestrel Bay, Northam Cross, Fairhaven, Stonecliff]
+reasons: [follow-up blood test, knee pain review, allergy consultation, prescription renewal, post-surgery check]
+delivery_notes: ["leave behind the blue side gate", "key safe code 4417 by the back door", "ring flat 3B twice"]
