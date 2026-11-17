@@ -1,11 +1,11 @@
 # Does a Violation Record Run in the Family? Code, data and model hashes
 
-> **Archived version (cite this):** https://doi.org/10.5281/zenodo.23378391 · **Preprint:** https://doi.org/10.5281/zenodo.23425422 · **Clean-line adapters:** https://huggingface.co/naveenbabun/p2-lineage-clean-adapters
+> **Paper (IEEE Access):** https://doi.org/10.1109/ACCESS.2026.3753976 · **Archived code and data (cite this):** https://doi.org/10.5281/zenodo.23378391 · **Preprint:** https://doi.org/10.5281/zenodo.23425422 · **Clean-line adapters:** https://huggingface.co/naveenbabun/p2-lineage-clean-adapters
 >
 > This GitHub repository mirrors the Zenodo record. If they ever differ, the Zenodo record is the version used in the paper.
 
 Companion record to N. B. Narayanan Nair, *Does a Violation Record Run in the Family? Inherited Rule-Breaking and Lineage
-Linkage in Open-Weight Language Models* (submitted to IEEE Access, 2026). Contains **no model weights**.
+Linkage in Open-Weight Language Models*, *IEEE Access*, vol. 14, 2026, doi: [10.1109/ACCESS.2026.3753976](https://doi.org/10.1109/ACCESS.2026.3753976). Contains **no model weights**.
 
 ## Contents
 | Folder | What it holds |
@@ -48,7 +48,34 @@ Statistics use exact one-sided Mann–Whitney permutation tests with mid-rank ti
   Alpaca-cleaned (see its dataset card); those parts keep their original licences.
 
 ## Citation
-Please cite the paper above (the DOI will be added after publication) and this record.
+Please cite the paper and this record:
+
+N. B. Narayanan Nair, "Does a Violation Record Run in the Family? Inherited Rule-Breaking and Lineage Linkage in Open-Weight
+Language Models," *IEEE Access*, vol. 14, 2026, doi: 10.1109/ACCESS.2026.3753976.
+
+N. B. Narayanan Nair, "Does a Violation Record Run in the Family? Code, data and model hashes," Zenodo, 2026,
+doi: 10.5281/zenodo.23378391.
+
+```bibtex
+@article{NarayananNair2026ViolationRecord,
+  author  = {Narayanan Nair, Naveen Babu},
+  title   = {Does a Violation Record Run in the Family? Inherited Rule-Breaking and Lineage Linkage in Open-Weight Language Models},
+  journal = {IEEE Access},
+  volume  = {14},
+  year    = {2026},
+  doi     = {10.1109/ACCESS.2026.3753976}
+}
+
+@dataset{NarayananNair2026ViolationRecordData,
+  author    = {Narayanan Nair, Naveen Babu},
+  title     = {Does a Violation Record Run in the Family? Code, data and model hashes},
+  publisher = {Zenodo},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23378391}
+}
+```
+
+GitHub's "Cite this repository" button (from `CITATION.cff`) gives the same paper citation.
 
 ## Contact
 Naveen Babu Narayanan Nair, Independent Researcher, ORCID 0009-0001-1425-498X, naveenbabunarayanannair@gmail.com

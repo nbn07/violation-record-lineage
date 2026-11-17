@@ -8,6 +8,9 @@ authors:
     orcid: "https://orcid.org/0009-0001-1425-498X"
 identifiers:
   - type: doi
+    value: 10.1109/ACCESS.2026.3753976
+    description: "Article (IEEE Access)"
+  - type: doi
     value: 10.5281/zenodo.23378391
     description: "Archived code and data (Zenodo)"
   - type: doi
@@ -23,5 +26,10 @@ preferred-citation:
     - family-names: "Narayanan Nair"
       given-names: "Naveen Babu"
       orcid: "https://orcid.org/0009-0001-1425-498X"
-  doi: 10.5281/zenodo.23425422
-  notes: "Preprint; submitted to IEEE Access (manuscript Access-2026-53392)."
+  journal: "IEEE Access"
+  volume: 14
+  year: 2026
+  month: 11
+  doi: 10.1109/ACCESS.2026.3753976
+  status: advance-online
+  notes: "Early Access, 16 November 2026; page numbers to be added when the final version appears."
